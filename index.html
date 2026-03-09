@@ -593,7 +593,7 @@ function buildShoppingUserMsg() {
 // ══════════════════════════════════════════════
 // Claude API
 // ══════════════════════════════════════════════
-async function getClaudeResponse(systemMsg, userMsg, maxTokens = 2048) {
+async function getClaudeResponse(systemMsg, userMsg, maxTokens = 4096) {
   const response = await fetch('/api/claude', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },

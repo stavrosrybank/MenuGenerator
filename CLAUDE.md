@@ -5,13 +5,13 @@ A personal weekly dinner planner SPA. Calls Claude API to generate N dinner sugg
 
 ## Tech Stack
 - **Frontend**: Single `index.html` — plain HTML + embedded CSS + embedded JS. No build tools, no npm, no React.
-- **Backend**: Vercel serverless function `api/claude.js` (Node.js, no dependencies) — proxies Claude API calls to keep the API key off the browser.
+- **Backend**: Vercel serverless function `api/claude.js` (Node.js CommonJS, no dependencies) — proxies Claude API calls to keep the API key off the browser.
 - **Deployment**: Vercel (zero config)
 - **Local dev**: `vercel dev` with `.env.local` containing `ANTHROPIC_API_KEY=sk-ant-...`
 
 ## Claude API
 - Model: `claude-sonnet-4-6`
-- `max_tokens`: 2048 (week generation / swap), 1024 (shopping list)
+- `max_tokens`: 4096 (week generation / swap), 1024 (shopping list)
 - Endpoint proxied via `/api/claude`
 
 ## Dietary Rules (always in system prompt)
